@@ -2,7 +2,7 @@ import pandas
 import matplotlib.pyplot as plt
 
 # [1 rows x 153 columns]
-dataset = pandas.read_csv('coronavirusdata/time_series_covid_19_confirmed_turkey.csv')
+dataset = pandas.read_csv('corona/coronavirusdata/time_series_covid_19_confirmed_turkey.csv')
 
 # Hide column
 dataset = dataset.drop('Province/State', axis=1)

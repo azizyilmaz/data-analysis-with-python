@@ -1,7 +1,7 @@
 import pandas
 import matplotlib.pyplot as plt
 
-dataset = pandas.read_csv('coronavirusdata/covid_19_data.csv')
+dataset = pandas.read_csv('corona/coronavirusdata/covid_19_data.csv')
 
 turkey = dataset[dataset['Country/Region'] == 'Turkey']
 italy = dataset[dataset['Country/Region'] == 'Italy']

@@ -1,6 +1,6 @@
 import pandas
 
-dataset = pandas.read_csv("coronavirusdata/covid_19_data.csv")
+dataset = pandas.read_csv("corona/coronavirusdata/covid_19_data.csv")
 
 print(f'Covid19 veri listesi:\n{dataset}')
 
