@@ -1,14 +1,32 @@
-#Python environmentlar'ı projeye yüklenir
+# Python environmentlar'ı projeye yüklenir
 C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>py -3 -m venv corona-env
 
-#Environment activate edilir
+# Environment activate edilir
 C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>corona-env\Scripts\activate
 
-#Pandas (veri analizi modülü) kütüphanesi projeye yüklenir
+# Pandas (veri analizi modülü) kütüphanesi projeye yüklenir
 (corona-env) C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>pip install pandas
 
-#Yüklü paketler listelenir
+# Yüklü paketler listelenir
 (corona-env) C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>pip freeze
 #numpy==1.19.0
 #pandas==1.0.5
 #matplotlib==3.2.2
+
+# This usually happens when the repo contains some items that are not there locally.
+'''
+PS C:\Users\AZIZ\Documents\programming\python\data-analysis> git pull --rebase data-analysis-with-python  master
+From https://github.com/azizyilmaz/data-analysis-with-python
+ * branch            master     -> FETCH_HEAD
+Successfully rebased and updated refs/heads/master.
+PS C:\Users\AZIZ\Documents\programming\python\data-analysis> git push data-analysis-with-python master      
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (33/33), 2.97 MiB | 368.00 KiB/s, done.
+Total 33 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/azizyilmaz/data-analysis-with-python.git
+   3488a24..9367154  master -> master
+'''
