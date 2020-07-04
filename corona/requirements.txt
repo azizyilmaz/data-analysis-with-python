@@ -1,0 +1,14 @@
+#Python environmentlar'ı projeye yüklenir
+C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>py -3 -m venv corona-env
+
+#Environment activate edilir
+C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>corona-env\Scripts\activate
+
+#Pandas (veri analizi modülü) kütüphanesi projeye yüklenir
+(corona-env) C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>pip install pandas
+
+#Yüklü paketler listelenir
+(corona-env) C:\Users\AZIZ\Documents\programming\python\data-analysis\corona>pip freeze
+#numpy==1.19.0
+#pandas==1.0.5
+#matplotlib==3.2.2
