@@ -18,6 +18,7 @@ dataset.columns = ['Confirmed']
 # Filter greater than zero
 dataset = dataset[dataset['Confirmed'] > 0]
 print(dataset)
+print(dataset.dtypes)
 
 dataset.plot(color='orange')
 
