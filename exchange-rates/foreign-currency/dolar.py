@@ -1,7 +1,7 @@
 import pandas
 import matplotlib.pyplot as plt
 
-# User 'Tarih' column as index
+# Use 'Tarih' column as index
 ds = pandas.read_csv('exchange-rates/data/USD TRY Veri Geçmişi - Investing.com.csv', index_col = 0)
 
 # Hide column
