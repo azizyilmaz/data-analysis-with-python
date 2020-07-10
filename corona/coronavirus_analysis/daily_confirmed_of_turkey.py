@@ -2,7 +2,8 @@ import pandas
 import matplotlib.pyplot as plt
 
 # [1 rows x 153 columns]
-dataset = pandas.read_csv('corona/coronavirusdata/time_series_covid_19_confirmed_turkey.csv')
+dataset = pandas.read_csv(
+    'corona/coronavirusdata/time_series_covid_19_confirmed_turkey.csv')
 
 # Hide column
 dataset = dataset.drop('Province/State', axis=1)
@@ -17,6 +18,11 @@ dataset.columns = ['Confirmed']
 
 # Filter greater than zero
 dataset = dataset[dataset['Confirmed'] > 0]
+print(dataset)
+print(dataset.dtypes)
+
+# Set index as datetime
+dataset.index = pandas.to_datetime(dataset.index)
 print(dataset)
 print(dataset.dtypes)
 

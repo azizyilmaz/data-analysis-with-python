@@ -1,8 +1,9 @@
-import pandas
+import pandas as pd
 import matplotlib.pyplot as plt
 
 # Use 'Tarih' column as index
-ds = pandas.read_csv('exchange-rates/data/USD TRY Veri Geçmişi - Investing.com.csv', index_col = 0)
+ds = pd.read_csv(
+    'exchange-rates/data/USD TRY Veri Geçmişi - Investing.com.csv')
 
 # Hide column
 ds = ds.drop('Açılış', axis=1)
@@ -10,13 +11,16 @@ ds = ds.drop('Yüksek', axis=1)
 ds = ds.drop('Düşük', axis=1)
 ds = ds.drop('Fark %', axis=1)
 
-ylabel = 'USD/TRY'
-
 # Change column's name
-ds.columns = [ylabel]
+ds.columns = ['Tarih', 'USD/TRY']
 
-# Reverse dataset
-ds = ds[::-1]
+# Reverse dataset's index
+ds = ds[::-1].reset_index(drop=True)
+print(ds)
+print(ds.dtypes)
+
+# Set 'Tarih' to index of dataset
+ds.index = pd.to_datetime(ds['Tarih'])
 print(ds)
 print(ds.dtypes)
 
@@ -24,7 +28,7 @@ ds.plot(color='blue')
 
 plt.grid()
 plt.xlabel('Tarih')
-plt.ylabel(ylabel)
+plt.ylabel('TRY')
 plt.title('1 USD kaç TRY?')
 plt.legend()
 plt.show()
