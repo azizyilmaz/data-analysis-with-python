@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Use 'Tarih' column as index
 ds = pd.read_csv(
     'exchange-rates/data/Altın Vadeli İşlemleri Fiyat Geçmişi - Investing.com.csv')
 
